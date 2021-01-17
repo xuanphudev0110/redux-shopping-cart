@@ -1,0 +1,279 @@
+.navbar-menu {
+  background: #0082e6;
+  height: 70px;
+  width: 100%;
+  label.logo {
+    color: #fff;
+    font-size: 35px;
+    line-height: 70px;
+    padding: 0 100px;
+    font-weight: bold;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  ul {
+    float: right;
+    margin-right: 100px;
+    li {
+      display: inline-block;
+      line-height: 70px;
+      margin: 0 5px;
+      a {
+        color: #fff;
+        font-size: 17px;
+        padding: 7px 13px;
+        border-radius: 4px;
+        text-decoration: none;
+        &:hover {
+          background: #1b9bff;
+          transition: 0.5s;
+        }
+      }
+    }
+    .cart {
+      .fa-cart-plus {
+        font-size: 20px;
+        padding-right: 5px;
+      }
+      a {
+        background: #1b9bff;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+  .checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 70px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 952px) {
+  .navbar-menu {
+    label.logo {
+      font-size: 30px;
+      padding-left: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 778px) {
+  .navbar-menu {
+    position: relative;
+    .checkbtn {
+      display: block;
+    }
+    ul {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 70px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+      z-index: 3;
+      li {
+        display: block;
+        margin: 50px 0;
+        line-height: 20px;
+        a {
+          font-size: 20px;
+        }
+        a:hover {
+          background: none;
+          color: #0082e6;
+        }
+      }
+    }
+    #check:checked ~ ul {
+      left: 0;
+    }
+  }
+}
+
+/* Home */
+.image {
+  position: relative;
+  box-shadow: 0px 2px 15px darkblue;
+  overflow: hidden;
+}
+.image img {
+  width: 100%;
+}
+
+.addToCart {
+  position: absolute;
+  width: 100%;
+  background-color: darkgrey;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  left: 0;
+  top: calc(55% + 6px);
+  cursor: pointer;
+  text-align: center;
+}
+
+.image:hover .addToCart {
+  opacity: 1;
+  left: 0;
+  top: calc(42% + 9px);
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* cart page */
+
+.container-products {
+  max-width: 800px;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.container-products i {
+  font-size: 25px;
+  color: blue;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.product-header {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 4px solid lightgray;
+  margin: 0 auto;
+}
+
+.product-title {
+  width: 45%;
+}
+
+.price {
+  width: 15%;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+}
+
+.quantity {
+  width: 30%;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+}
+
+.total {
+  width: 10%;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+}
+
+.product {
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid lightgray;
+}
+
+.product i {
+  cursor: pointer;
+}
+
+.products {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products img {
+  width: 75px;
+}
+
+.basketTotalContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.basketTotalTitle {
+  width: 30%;
+}
+
+.basketTotal {
+  width: 10%;
+}
+
+@media (max-width: 500px) {
+  .navbar-menu h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .sm-hide {
+    display: none;
+  }
+  .products,
+  .product-header {
+    justify-content: center;
+  }
+  .basketTotalContainer {
+    padding-right: 8%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .card-44 {
+    margin-top: 30px;
+  }
+  .image:hover .addToCart {
+    opacity: 1;
+    left: 0;
+    top: calc(34% + 9px);
+    padding: 10px;
+    text-decoration: none;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .card-33,
+  .card-44 {
+    margin-top: 30px;
+  }
+  .image:hover .addToCart {
+    opacity: 1;
+    left: 0;
+    top: calc(40% + 9px);
+    padding: 10px;
+    text-decoration: none;
+  }
+}
+@media (max-width: 575px) {
+  .card-33,
+  .card-22,
+  .card-44 {
+    margin-top: 30px;
+  }
+  .image:hover .addToCart {
+    opacity: 1;
+    left: 0;
+    top: calc(67% + 9px);
+    padding: 10px;
+    text-decoration: none;
+  }
+}
